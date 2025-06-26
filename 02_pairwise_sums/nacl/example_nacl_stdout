@@ -1,0 +1,626 @@
+Enforcing asymmetry via partitioning:   false
+Enforcing unit cell molecules in gamma: true
+Found 2 symmetry unique molecules
+index label                          formula
+0     1A                                  Na
+1     2A                                  Cl
+Geometry for molecule 0 (1A)
+sym     x          y          z     
+Na    0.000000   0.000000   0.000000
+===============================  Input  ================================
+Method string                       b3lyp
+Basis name                        6-31g**
+Shell kind                      Cartesian
+Net charge                              1
+Multiplicity                            1
+Geometry '' (au)  ------------------------------------------------------
+Na      0.000000     0.000000     0.000000
+Inertia tensor (x 10e-46 kg m^2)  --------------------------------------
+    0.000000     0.000000     0.000000
+    0.000000     0.000000     0.000000
+    0.000000     0.000000     0.000000
+Principal moments of inertia  ------------------------------------------
+    0.000000     0.000000     0.000000
+Rotational constants (GHz)  --------------------------------------------
+    0.000000     0.000000     0.000000
+
+
+Gas-phase properties (at 298.15 K)  ------------------------------------
+Rotational free energy          0.000000 kJ/mol
+Translational free energy     -37.915726 kJ/mol
+Loaded basis set: cartesian
+Number of shells:            8
+Number of  basis functions:  19
+Maximum angular momentum:    2
+DFT method string: b3lyp
+Functionals:
+Loaded 40 DFT method definitions from /Users/285699f/git/awscc_workshop_2025/share/occ/methods/dft_methods.json
+    hyb_gga_xc_b3lyp
+finished calculating atom grids (11738 points)
+Spinorbital kind: restricted
+Including potential from 0 point charges
+Computing core hamiltonian
+Computing initial guess using SOAD in minimal basis
+starting restricted scf iterations
+   #         E (Hartrees)       |dE|/E max|FDS-SDF|     T (s)
+   1    -162.072322503796  3.88099e-01  4.04070e-02  1.83e-02
+   2    -162.081177653073  5.46340e-05  4.30285e-03  1.38e-02
+   3    -162.081229748840  3.21418e-07  3.14681e-04  1.17e-02
+   4    -162.081230309263  3.45767e-09  3.92251e-06  1.08e-02
+restricted spinorbital SCF energy converged after 0.05461 seconds
+
+Component                            Energy (Hartree)
+
+nuclear  ---------------------------------------------------------------
+nuclear.repulsion                      0.000000000000
+nuclear.point_charge                   0.000000000000
+nuclear.total                          0.000000000000
+electronic  ------------------------------------------------------------
+electronic.kinetic                   161.302924701758
+electronic.nuclear                  -385.902820767750
+electronic.1e                       -224.599896065992
+electronic                          -162.081230309263
+electronic.2e                         62.518665756729
+electronic.dft_xc                    -11.508309575412
+
+
+total                               -162.081230309263
+
+wavefunction stored in NaCl_0.owf.json
+Geometry for molecule 1 (2A)
+sym     x          y          z     
+Cl    5.377871   0.000000   0.000000
+===============================  Input  ================================
+Method string                       b3lyp
+Basis name                        6-31g**
+Shell kind                      Cartesian
+Net charge                             -1
+Multiplicity                            1
+Geometry '' (au)  ------------------------------------------------------
+Cl      5.377871     0.000000     0.000000
+Inertia tensor (x 10e-46 kg m^2)  --------------------------------------
+    0.000000     0.000000     0.000000
+    0.000000     0.000000     0.000000
+    0.000000     0.000000     0.000000
+Principal moments of inertia  ------------------------------------------
+    0.000000     0.000000     0.000000
+Rotational constants (GHz)  --------------------------------------------
+    0.000000     0.000000     0.000000
+
+
+Gas-phase properties (at 298.15 K)  ------------------------------------
+Rotational free energy          0.000000 kJ/mol
+Translational free energy     -39.526414 kJ/mol
+Loaded basis set: cartesian
+Number of shells:            8
+Number of  basis functions:  19
+Maximum angular momentum:    2
+DFT method string: b3lyp
+Functionals:
+Loaded 40 DFT method definitions from /Users/285699f/git/awscc_workshop_2025/share/occ/methods/dft_methods.json
+    hyb_gga_xc_b3lyp
+finished calculating atom grids (11156 points)
+Spinorbital kind: restricted
+Including potential from 0 point charges
+Computing core hamiltonian
+Computing initial guess using SOAD in minimal basis
+starting restricted scf iterations
+   #         E (Hartrees)       |dE|/E max|FDS-SDF|     T (s)
+   1    -459.830337525064  3.72589e-01  1.47444e-01  1.02e-02
+   2    -459.984999445693  3.36233e-04  1.37714e-01  1.02e-02
+   3    -460.002906651259  3.89285e-05  1.45431e-01  9.81e-03
+   4    -460.251762229155  5.40694e-04  5.76256e-03  9.75e-03
+   5    -460.252233844201  1.02469e-06  1.99234e-04  9.68e-03
+   6    -460.252234353444  1.10644e-09  1.13524e-06  9.76e-03
+restricted spinorbital SCF energy converged after 0.05935 seconds
+
+Component                            Energy (Hartree)
+
+nuclear  ---------------------------------------------------------------
+nuclear.repulsion                      0.000000000000
+nuclear.point_charge                   0.000000000000
+nuclear.total                          0.000000000000
+electronic  ------------------------------------------------------------
+electronic.kinetic                   458.810858560109
+electronic.nuclear                 -1100.524484772351
+electronic.1e                       -641.713626212241
+electronic                          -460.252234353444
+electronic.2e                        181.461391858797
+electronic.dft_xc                    -22.951314940990
+
+
+total                               -460.252234353444
+
+wavefunction stored in NaCl_1.owf.json
+Gas phase wavefunctions took 0.129093 seconds
+DFT method string: b3lyp
+Functionals:
+Loaded 40 DFT method definitions from /Users/285699f/git/awscc_workshop_2025/share/occ/methods/dft_methods.json
+    hyb_gga_xc_b3lyp
+finished calculating atom grids (11738 points)
+Using SMD solvent 'water'
+Parameters:
+Dielectric                      78.3550
+Intrinsic coulomb radii (1 atom types)
+Na          4.289678
+CDS radii
+Na          5.045569
+solvent surface:
+total surface area (coulomb) =     64.753 Angstroms^2, 146 finite elements
+total surface area (cds)     =     89.584 Angstroms^2, 146 finite elements
+CDS energy: 0.0000
+CDS energy (molecular): 0.0000
+Computing core hamiltonian
+Computing initial guess using SOAD in minimal basis
+starting restricted scf iterations
+   #         E (Hartrees)       |dE|/E max|FDS-SDF|     T (s)
+   1    -162.187741143073  4.08152e-01  4.03750e-02  1.38e-02
+   2    -162.196573615149  5.63646e-05  4.32115e-03  1.34e-02
+   3    -162.196626759214  6.21123e-07  3.20483e-04  1.35e-02
+   4    -162.196627350661  2.20905e-08  3.95990e-06  1.33e-02
+restricted spinorbital SCF energy converged after 0.05394 seconds
+
+Component                            Energy (Hartree)
+
+nuclear  ---------------------------------------------------------------
+nuclear.repulsion                      0.000000000000
+electronic  ------------------------------------------------------------
+electronic.kinetic                   161.301515928766
+electronic.nuclear                  -385.900123759978
+electronic.1e                       -222.290788393309
+electronic                          -159.773410781568
+electronic.2e                         62.517377611741
+electronic.dft_xc                    -11.508164591105
+solvation  -------------------------------------------------------------
+solvation.electronic                   2.307819437904
+solvation.nuclear                     -2.538613700281
+solvation.surface                      0.115397131189
+solvation.CDS                          0.000000000000
+
+
+total                               -162.196627350661
+
+SCF difference         (au)          -0.115
+Writing solvated surface properties to NaCl_0_water_surface.json
+Writing solvated wavefunction to NaCl_0_water.owf.json
+wavefunction stored in NaCl_0_water.owf.json
+DFT method string: b3lyp
+Functionals:
+Loaded 40 DFT method definitions from /Users/285699f/git/awscc_workshop_2025/share/occ/methods/dft_methods.json
+    hyb_gga_xc_b3lyp
+finished calculating atom grids (11156 points)
+Using SMD solvent 'water'
+Parameters:
+Dielectric                      78.3550
+Intrinsic coulomb radii (1 atom types)
+Cl          4.497548
+CDS radii
+Cl          4.062911
+solvent surface:
+total surface area (coulomb) =     71.181 Angstroms^2, 146 finite elements
+total surface area (cds)     =     58.088 Angstroms^2, 146 finite elements
+CDS energy: 0.5704
+CDS energy (molecular): 0.0000
+Computing core hamiltonian
+Computing initial guess using SOAD in minimal basis
+starting restricted scf iterations
+   #         E (Hartrees)       |dE|/E max|FDS-SDF|     T (s)
+   1    -459.937236689989  3.60990e-01  1.47848e-01  1.32e-02
+   2    -460.092952320966  4.09461e-04  1.37745e-01  1.30e-02
+   3    -460.111429124384  2.76936e-05  1.45329e-01  1.30e-02
+   4    -460.359807547811  5.72054e-04  5.74695e-03  1.31e-02
+   5    -460.360276693278  2.39208e-06  1.98844e-04  1.30e-02
+   6    -460.360277200468  4.91742e-08  1.12417e-06  1.30e-02
+restricted spinorbital SCF energy converged after 0.07825 seconds
+
+Component                            Energy (Hartree)
+
+nuclear  ---------------------------------------------------------------
+nuclear.repulsion                      0.000000000000
+electronic  ------------------------------------------------------------
+electronic.kinetic                   458.818117895224
+electronic.nuclear                 -1100.544870640904
+electronic.1e                       -645.667709775938
+electronic                          -464.193190442130
+electronic.2e                        181.474519333807
+electronic.dft_xc                    -22.952092007590
+solvation  -------------------------------------------------------------
+solvation.electronic                  -3.940957030258
+solvation.nuclear                      3.723051394423
+solvation.surface                      0.108952817917
+solvation.CDS                          0.000909029321
+
+
+total                               -460.360277200468
+
+SCF difference         (au)          -0.108
+Writing solvated surface properties to NaCl_1_water_surface.json
+Writing solvated wavefunction to NaCl_1_water.owf.json
+wavefunction stored in NaCl_1_water.owf.json
+Solution phase wavefunctions took 0.147326 seconds
+Computing monomer energies for gas phase
+Computing monomer energies for solution phase
+Computing monomer energies took 0.018253 seconds
+Computing crystal interactions using gas wavefunctions
+Maximum num pts: 8000
+Separations (au): 0.529 0.529 0.529
+Actual num points used in fit: 1949
+CHELPG RMSD: 1.38204e-07
+Maximum num pts: 8000
+Separations (au): 0.529 0.529 0.529
+Actual num points used in fit: 3131
+CHELPG RMSD: 9.72694e-05
+Charges used in wolf for molecule 0
+Atom 0:      1.00000
+Charges used in wolf for molecule 1
+Atom 0:     -1.00000
+Found 299 symmetry unique dimers within max radius 60.000
+E[0|1]: 1A<=>2A(-1+x,y,z)                0/1   0% 
+Cycle 1 lattice energy: -1790.7392690114798
+E[0|0]: 1A<=>1A(-1+x,y,z)                0/3   0% 
+E[1|1]: 2A<=>2A(-1+x,y,z)                1/3  33% 1m 8s 488ms
+E[0|1]: 1A<=>2A(-1+x,-1+y,z)             2/3  66% 865ms
+Cycle 2 lattice energy: -2108.2292884553926
+E[0|0]: 1A<=>1A(-1+x,-1+y,z)             0/8   0% 
+E[1|1]: 2A<=>2A(-1+x,-1+y,z)             1/8  12% 4m 45s 632ms
+E[0|1]: 1A<=>2A(-2+x,y,z)                2/8  25% 4s 333ms
+E[0|0]: 1A<=>1A(-1+x,-1+y,-1+z)          3/8  37% 1s 133ms
+E[1|1]: 2A<=>2A(-1+x,-1+y,-1+z)          4/8  50% 527ms
+E[0|1]: 1A<=>2A(-2+x,-1+y,z)             5/8  62% 284ms
+E[0|0]: 1A<=>1A(-2+x,y,z)                6/8  75% 160ms
+E[1|1]: 2A<=>2A(-2+x,y,z)                7/8  87% 88ms
+Cycle 3 lattice energy: -829.5108792548691
+E[0|1]: 1A<=>2A(-2+x,-1+y,-1+z)          0/7   0% 
+E[0|0]: 1A<=>1A(-2+x,-1+y,z)             1/7  14% 3m 22s 520ms
+E[1|1]: 2A<=>2A(-2+x,-1+y,z)             2/7  28% 3s 479ms
+E[0|1]: 1A<=>2A(-1+x,-2+y,-1+z)          3/7  42% 821ms
+E[0|0]: 1A<=>1A(-2+x,-1+y,-1+z)          4/7  57% 340ms
+E[1|1]: 2A<=>2A(-2+x,-1+y,-1+z)          5/7  71% 172ms
+E[0|1]: 1A<=>2A(-3+x,y,z)                6/7  85% 83ms
+Cycle 4 lattice energy: -373.7963861233957
+E[0|1]: 1A<=>2A(-3+x,-1+y,z)             0/12   0% 
+E[0|0]: 1A<=>1A(-2+x,-2+y,z)             1/12   8% 6m 49s 766ms
+E[1|1]: 2A<=>2A(-2+x,-2+y,z)             2/12  16% 3s 484ms
+E[0|1]: 1A<=>2A(-3+x,-1+y,-1+z)          3/12  25% 818ms
+E[0|0]: 1A<=>1A(-3+x,y,z)                4/12  33% 417ms
+E[1|1]: 2A<=>2A(-3+x,y,z)                5/12  41% 278ms
+E[0|1]: 1A<=>2A(-1+x,-3+y,z)             6/12  50% 217ms
+E[0|0]: 1A<=>1A(-3+x,-1+y,z)             7/12  58% 169ms
+E[1|1]: 2A<=>2A(-3+x,-1+y,z)             8/12  66% 133ms
+E[0|1]: 1A<=>2A(-3+x,-2+y,z)             9/12  75% 99ms
+E[0|0]: 1A<=>1A(-3+x,-1+y,-1+z)          10/12  83% 66ms
+E[1|1]: 2A<=>2A(-3+x,-1+y,-1+z)          11/12  91% 37ms
+Cycle 5 lattice energy: 128.4122192726171
+E[0|1]: 1A<=>2A(-3+x,-2+y,-1+z)          0/13   0% 
+E[0|0]: 1A<=>1A(-2+x,-2+y,-2+z)          1/13   7% 7m 57s 184ms
+E[1|1]: 2A<=>2A(-2+x,-2+y,-2+z)          2/13  15% 1s 797ms
+E[0|1]: 1A<=>2A(-4+x,y,z)                3/13  23% 541ms
+E[0|0]: 1A<=>1A(-3+x,-2+y,z)             4/13  30% 333ms
+E[1|1]: 2A<=>2A(-3+x,-2+y,z)             5/13  38% 251ms
+E[0|1]: 1A<=>2A(-4+x,-1+y,z)             6/13  46% 202ms
+E[0|0]: 1A<=>1A(-3+x,-2+y,-1+z)          7/13  53% 166ms
+E[1|1]: 2A<=>2A(-3+x,-2+y,-1+z)          8/13  61% 135ms
+E[0|1]: 1A<=>2A(-4+x,-1+y,-1+z)          9/13  69% 106ms
+E[0|1]: 1A<=>2A(-3+x,-3+y,z)             10/13  76% 79ms
+E[0|0]: 1A<=>1A(-4+x,y,z)                11/13  84% 52ms
+E[1|1]: 2A<=>2A(-4+x,y,z)                12/13  92% 27ms
+Cycle 6 lattice energy: -1417.1247621492298
+E[0|1]: 1A<=>2A(-4+x,-2+y,z)             0/16   0% 
+E[0|0]: 1A<=>1A(-4+x,-1+y,z)             1/16   6% 9m 57s 55ms
+E[1|1]: 2A<=>2A(-4+x,-1+y,z)             2/16  12% 935ms
+E[0|1]: 1A<=>2A(-4+x,-2+y,-1+z)          3/16  18% 433ms
+E[0|0]: 1A<=>1A(-4+x,-1+y,-1+z)          4/16  25% 340ms
+E[1|1]: 2A<=>2A(-4+x,-1+y,-1+z)          5/16  31% 297ms
+E[0|1]: 1A<=>2A(-2+x,-4+y,z)             6/16  37% 262ms
+E[0|0]: 1A<=>1A(-3+x,-3+y,-1+z)          7/16  43% 232ms
+E[1|1]: 2A<=>2A(-3+x,-3+y,-1+z)          8/16  50% 204ms
+E[0|1]: 1A<=>2A(-3+x,-3+y,-2+z)          9/16  56% 178ms
+E[0|0]: 1A<=>1A(-4+x,-2+y,z)             10/16  62% 152ms
+E[1|1]: 2A<=>2A(-4+x,-2+y,z)             11/16  68% 127ms
+E[0|1]: 1A<=>2A(-5+x,y,z)                12/16  75% 101ms
+E[0|0]: 1A<=>1A(-4+x,-2+y,-1+z)          13/16  81% 76ms
+E[1|1]: 2A<=>2A(-4+x,-2+y,-1+z)          14/16  87% 52ms
+E[0|1]: 1A<=>2A(-5+x,-1+y,z)             15/16  93% 26ms
+Cycle 7 lattice energy: -446.811019079476
+E[0|0]: 1A<=>1A(-3+x,-3+y,-2+z)          0/17   0% 
+E[1|1]: 2A<=>2A(-3+x,-3+y,-2+z)          1/17   5% 11m 33s 306ms
+E[0|1]: 1A<=>2A(-5+x,-1+y,-1+z)          2/17  11% 2s 315ms
+E[0|1]: 1A<=>2A(-3+x,-4+y,-1+z)          3/17  17% 770ms
+E[0|0]: 1A<=>1A(-4+x,-2+y,-2+z)          4/17  23% 483ms
+E[1|1]: 2A<=>2A(-4+x,-2+y,-2+z)          5/17  29% 379ms
+E[0|1]: 1A<=>2A(-5+x,-2+y,z)             6/17  35% 314ms
+E[0|0]: 1A<=>1A(-5+x,y,z)                7/17  41% 271ms
+E[1|1]: 2A<=>2A(-5+x,y,z)                8/17  47% 237ms
+E[0|1]: 1A<=>2A(-5+x,-2+y,-1+z)          9/17  52% 206ms
+E[0|0]: 1A<=>1A(-5+x,-1+y,z)             10/17  58% 178ms
+E[1|1]: 2A<=>2A(-5+x,-1+y,z)             11/17  64% 154ms
+E[0|1]: 1A<=>2A(-3+x,-4+y,-2+z)          12/17  70% 128ms
+E[0|0]: 1A<=>1A(-5+x,-1+y,-1+z)          13/17  76% 102ms
+E[1|1]: 2A<=>2A(-5+x,-1+y,-1+z)          14/17  82% 77ms
+E[0|1]: 1A<=>2A(-2+x,-5+y,z)             15/17  88% 51ms
+E[0|1]: 1A<=>2A(-5+x,-2+y,-2+z)          16/17  94% 26ms
+Cycle 8 lattice energy: -2630.5546761945325
+E[0|0]: 1A<=>1A(-5+x,-2+y,z)             0/21   0% 
+E[1|1]: 2A<=>2A(-5+x,-2+y,z)             1/21   4% 13m 57s 875ms
+E[0|1]: 1A<=>2A(-5+x,-3+y,z)             2/21   9% 2s 685ms
+E[0|0]: 1A<=>1A(-5+x,-2+y,-1+z)          3/21  14% 966ms
+E[1|1]: 2A<=>2A(-5+x,-2+y,-1+z)          4/21  19% 634ms
+E[0|1]: 1A<=>2A(-6+x,y,z)                5/21  23% 498ms
+E[0|1]: 1A<=>2A(-6+x,-1+y,z)             6/21  28% 429ms
+E[0|0]: 1A<=>1A(-4+x,-4+y,z)             7/21  33% 384ms
+E[1|1]: 2A<=>2A(-4+x,-4+y,z)             8/21  38% 348ms
+E[0|1]: 1A<=>2A(-6+x,-1+y,-1+z)          9/21  42% 316ms
+E[0|0]: 1A<=>1A(-5+x,-2+y,-2+z)          10/21  47% 286ms
+E[1|1]: 2A<=>2A(-5+x,-2+y,-2+z)          11/21  52% 259ms
+E[0|1]: 1A<=>2A(-5+x,-3+y,-2+z)          12/21  57% 231ms
+E[0|0]: 1A<=>1A(-5+x,-3+y,z)             13/21  61% 205ms
+E[1|1]: 2A<=>2A(-5+x,-3+y,z)             14/21  66% 180ms
+E[0|1]: 1A<=>2A(-6+x,-2+y,z)             15/21  71% 154ms
+E[0|0]: 1A<=>1A(-5+x,-3+y,-1+z)          16/21  76% 128ms
+E[1|1]: 2A<=>2A(-5+x,-3+y,-1+z)          17/21  80% 103ms
+E[0|1]: 1A<=>2A(-6+x,-2+y,-1+z)          18/21  85% 77ms
+E[0|0]: 1A<=>1A(-6+x,y,z)                19/21  90% 51ms
+E[1|1]: 2A<=>2A(-6+x,y,z)                20/21  95% 27ms
+Cycle 9 lattice energy: 249.2587887941001
+E[0|1]: 1A<=>2A(-5+x,-4+y,z)             0/23   0% 
+E[0|0]: 1A<=>1A(-6+x,-1+y,z)             1/23   4% 14m 34s 338ms
+E[1|1]: 2A<=>2A(-6+x,-1+y,z)             2/23   8% 1s 582ms
+E[0|1]: 1A<=>2A(-5+x,-4+y,-1+z)          3/23  13% 704ms
+E[0|0]: 1A<=>1A(-6+x,-1+y,-1+z)          4/23  17% 549ms
+E[1|1]: 2A<=>2A(-6+x,-1+y,-1+z)          5/23  21% 489ms
+E[0|1]: 1A<=>2A(-6+x,-2+y,-2+z)          6/23  26% 447ms
+E[0|1]: 1A<=>2A(-6+x,-3+y,z)             7/23  30% 413ms
+E[0|0]: 1A<=>1A(-6+x,-2+y,z)             8/23  34% 383ms
+E[1|1]: 2A<=>2A(-6+x,-2+y,z)             9/23  39% 356ms
+E[0|1]: 1A<=>2A(-6+x,-3+y,-1+z)          10/23  43% 330ms
+E[0|0]: 1A<=>1A(-6+x,-2+y,-1+z)          11/23  47% 304ms
+E[1|1]: 2A<=>2A(-6+x,-2+y,-1+z)          12/23  52% 280ms
+E[0|1]: 1A<=>2A(-4+x,-5+y,-2+z)          13/23  56% 254ms
+E[0|0]: 1A<=>1A(-5+x,-4+y,-1+z)          14/23  60% 229ms
+E[1|1]: 2A<=>2A(-5+x,-4+y,-1+z)          15/23  65% 205ms
+E[0|1]: 1A<=>2A(-7+x,y,z)                16/23  69% 179ms
+E[0|0]: 1A<=>1A(-5+x,-3+y,-3+z)          17/23  73% 153ms
+E[1|1]: 2A<=>2A(-5+x,-3+y,-3+z)          18/23  78% 129ms
+E[0|1]: 1A<=>2A(-7+x,-1+y,z)             19/23  82% 104ms
+E[0|0]: 1A<=>1A(-6+x,-2+y,-2+z)          20/23  86% 78ms
+E[1|1]: 2A<=>2A(-6+x,-2+y,-2+z)          21/23  91% 53ms
+E[0|1]: 1A<=>2A(-7+x,-1+y,-1+z)          22/23  95% 28ms
+Cycle 10 lattice energy: -1551.6741328112091
+E[0|0]: 1A<=>1A(-6+x,-3+y,z)             0/25   0% 
+E[1|1]: 2A<=>2A(-6+x,-3+y,z)             1/25   3% 17m 12s 920ms
+E[0|1]: 1A<=>2A(-5+x,-5+y,z)             2/25   7% 2s 157ms
+E[0|0]: 1A<=>1A(-6+x,-3+y,-1+z)          3/25  11% 962ms
+E[1|1]: 2A<=>2A(-6+x,-3+y,-1+z)          4/25  15% 698ms
+E[0|1]: 1A<=>2A(-7+x,-2+y,z)             5/25  20% 578ms
+E[0|1]: 1A<=>2A(-7+x,-2+y,-1+z)          6/25  23% 513ms
+E[0|0]: 1A<=>1A(-4+x,-4+y,-4+z)          7/25  28% 470ms
+E[1|1]: 2A<=>2A(-4+x,-4+y,-4+z)          8/25  31% 436ms
+E[0|1]: 1A<=>2A(-6+x,-3+y,-3+z)          9/25  36% 408ms
+E[0|0]: 1A<=>1A(-7+x,y,z)                10/25  40% 380ms
+E[1|1]: 2A<=>2A(-7+x,y,z)                11/25  43% 355ms
+E[0|1]: 1A<=>2A(-5+x,-5+y,-2+z)          12/25  47% 329ms
+E[0|0]: 1A<=>1A(-7+x,-1+y,z)             13/25  51% 303ms
+E[1|1]: 2A<=>2A(-7+x,-1+y,z)             14/25  56% 278ms
+E[0|1]: 1A<=>2A(-7+x,-2+y,-2+z)          15/25  60% 252ms
+E[0|0]: 1A<=>1A(-7+x,-1+y,-1+z)          16/25  63% 227ms
+E[1|1]: 2A<=>2A(-7+x,-1+y,-1+z)          17/25  68% 202ms
+E[0|1]: 1A<=>2A(-7+x,-3+y,z)             18/25  72% 177ms
+E[0|0]: 1A<=>1A(-6+x,-4+y,z)             19/25  75% 151ms
+E[1|1]: 2A<=>2A(-6+x,-4+y,z)             20/25  80% 127ms
+E[0|1]: 1A<=>2A(-7+x,-3+y,-1+z)          21/25  83% 101ms
+E[0|0]: 1A<=>1A(-7+x,-2+y,z)             22/25  87% 75ms
+E[1|1]: 2A<=>2A(-7+x,-2+y,z)             23/25  92% 51ms
+E[0|1]: 1A<=>2A(-4+x,-5+y,-4+z)          24/25  95% 25ms
+Cycle 11 lattice energy: -1775.8863329481844
+E[0|0]: 1A<=>1A(-7+x,-2+y,-1+z)          0/26   0% 
+E[1|1]: 2A<=>2A(-7+x,-2+y,-1+z)          1/26   3% 18m 529ms
+E[0|1]: 1A<=>2A(-5+x,-5+y,-3+z)          2/26   7% 3s 543ms
+E[0|1]: 1A<=>2A(-7+x,-3+y,-2+z)          3/26  11% 1s 226ms
+E[0|0]: 1A<=>1A(-6+x,-4+y,-2+z)          4/26  15% 794ms
+E[1|1]: 2A<=>2A(-6+x,-4+y,-2+z)          5/26  19% 634ms
+E[0|1]: 1A<=>2A(-8+x,y,z)                6/26  23% 577ms
+E[0|0]: 1A<=>1A(-7+x,-2+y,-2+z)          7/26  26% 530ms
+E[1|1]: 2A<=>2A(-7+x,-2+y,-2+z)          8/26  30% 489ms
+E[0|1]: 1A<=>2A(-8+x,-1+y,z)             9/26  34% 454ms
+E[0|0]: 1A<=>1A(-7+x,-3+y,z)             10/26  38% 423ms
+E[1|1]: 2A<=>2A(-7+x,-3+y,z)             11/26  42% 394ms
+E[0|1]: 1A<=>2A(-8+x,-1+y,-1+z)          12/26  46% 365ms
+E[0|0]: 1A<=>1A(-7+x,-3+y,-1+z)          13/26  50% 337ms
+E[1|1]: 2A<=>2A(-7+x,-3+y,-1+z)          14/26  53% 310ms
+E[0|1]: 1A<=>2A(-7+x,-4+y,-1+z)          15/26  57% 283ms
+E[0|1]: 1A<=>2A(-8+x,-2+y,z)             16/26  61% 257ms
+E[0|0]: 1A<=>1A(-6+x,-5+y,z)             17/26  65% 231ms
+E[1|1]: 2A<=>2A(-6+x,-5+y,z)             18/26  69% 205ms
+E[0|1]: 1A<=>2A(-8+x,-2+y,-1+z)          19/26  73% 179ms
+E[0|0]: 1A<=>1A(-7+x,-3+y,-2+z)          20/26  76% 153ms
+E[1|1]: 2A<=>2A(-7+x,-3+y,-2+z)          21/26  80% 129ms
+E[0|1]: 1A<=>2A(-7+x,-4+y,-2+z)          22/26  84% 103ms
+E[0|1]: 1A<=>2A(-2+x,-6+y,-5+z)          23/26  88% 78ms
+E[0|0]: 1A<=>1A(-8+x,y,z)                24/26  92% 52ms
+E[1|1]: 2A<=>2A(-8+x,y,z)                25/26  96% 28ms
+Cycle 12 lattice energy: -1349.5363962282474
+E[0|1]: 1A<=>2A(-8+x,-2+y,-2+z)          0/32   0% 
+E[0|0]: 1A<=>1A(-8+x,-1+y,z)             1/32   3% 21m 3s 288ms
+E[1|1]: 2A<=>2A(-8+x,-1+y,z)             2/32   6% 2s 956ms
+E[0|1]: 1A<=>2A(-8+x,-3+y,z)             3/32   9% 1s 108ms
+E[0|0]: 1A<=>1A(-8+x,-1+y,-1+z)          4/32  12% 830ms
+E[1|1]: 2A<=>2A(-8+x,-1+y,-1+z)          5/32  15% 735ms
+E[0|1]: 1A<=>2A(-8+x,-3+y,-1+z)          6/32  18% 677ms
+E[0|0]: 1A<=>1A(-7+x,-3+y,-3+z)          7/32  21% 637ms
+E[1|1]: 2A<=>2A(-7+x,-3+y,-3+z)          8/32  25% 603ms
+E[0|1]: 1A<=>2A(-7+x,-5+y,z)             9/32  28% 572ms
+E[0|0]: 1A<=>1A(-8+x,-2+y,z)             10/32  31% 544ms
+E[1|1]: 2A<=>2A(-8+x,-2+y,z)             11/32  34% 518ms
+E[0|1]: 1A<=>2A(-7+x,-5+y,-1+z)          12/32  37% 491ms
+E[0|0]: 1A<=>1A(-8+x,-2+y,-1+z)          13/32  40% 465ms
+E[1|1]: 2A<=>2A(-8+x,-2+y,-1+z)          14/32  43% 440ms
+E[0|1]: 1A<=>2A(-8+x,-3+y,-2+z)          15/32  46% 415ms
+E[0|0]: 1A<=>1A(-6+x,-5+y,-3+z)          16/32  50% 390ms
+E[1|1]: 2A<=>2A(-6+x,-5+y,-3+z)          17/32  53% 366ms
+E[0|1]: 1A<=>2A(-6+x,-6+y,-2+z)          18/32  56% 341ms
+E[0|1]: 1A<=>2A(-7+x,-5+y,-2+z)          19/32  59% 316ms
+E[0|0]: 1A<=>1A(-8+x,-2+y,-2+z)          20/32  62% 291ms
+E[1|1]: 2A<=>2A(-8+x,-2+y,-2+z)          21/32  65% 267ms
+E[0|1]: 1A<=>2A(-9+x,y,z)                22/32  68% 243ms
+E[0|0]: 1A<=>1A(-8+x,-3+y,z)             23/32  71% 218ms
+E[1|1]: 2A<=>2A(-8+x,-3+y,z)             24/32  75% 194ms
+E[0|1]: 1A<=>2A(-9+x,-1+y,z)             25/32  78% 170ms
+E[0|0]: 1A<=>1A(-8+x,-3+y,-1+z)          26/32  81% 145ms
+E[1|1]: 2A<=>2A(-8+x,-3+y,-1+z)          27/32  84% 121ms
+E[0|1]: 1A<=>2A(-9+x,-1+y,-1+z)          28/32  87% 97ms
+E[0|0]: 1A<=>1A(-7+x,-5+y,-1+z)          29/32  90% 72ms
+E[1|1]: 2A<=>2A(-7+x,-5+y,-1+z)          30/32  93% 49ms
+E[0|1]: 1A<=>2A(-6+x,-6+y,-3+z)          31/32  96% 24ms
+Cycle 13 lattice energy: -1072.664720683679
+E[0|0]: 1A<=>1A(-6+x,-6+y,-2+z)          0/32   0% 
+E[1|1]: 2A<=>2A(-6+x,-6+y,-2+z)          1/32   3% 22m 6s 237ms
+E[0|1]: 1A<=>2A(-9+x,-2+y,z)             2/32   6% 4s 138ms
+E[0|0]: 1A<=>1A(-8+x,-3+y,-2+z)          3/32   9% 1s 578ms
+E[1|1]: 2A<=>2A(-8+x,-3+y,-2+z)          4/32  12% 1s 26ms
+E[0|1]: 1A<=>2A(-9+x,-2+y,-1+z)          5/32  15% 846ms
+E[0|0]: 1A<=>1A(-7+x,-5+y,-2+z)          6/32  18% 749ms
+E[1|1]: 2A<=>2A(-7+x,-5+y,-2+z)          7/32  21% 685ms
+E[0|1]: 1A<=>2A(-7+x,-6+y,z)             8/32  25% 640ms
+E[0|1]: 1A<=>2A(-7+x,-6+y,-1+z)          9/32  28% 604ms
+E[0|0]: 1A<=>1A(-8+x,-4+y,z)             10/32  31% 572ms
+E[1|1]: 2A<=>2A(-8+x,-4+y,z)             11/32  34% 542ms
+E[0|1]: 1A<=>2A(-9+x,-2+y,-2+z)          12/32  37% 513ms
+E[0|0]: 1A<=>1A(-9+x,y,z)                13/32  40% 485ms
+E[1|1]: 2A<=>2A(-9+x,y,z)                14/32  43% 458ms
+E[0|1]: 1A<=>2A(-9+x,-3+y,z)             15/32  46% 431ms
+E[0|0]: 1A<=>1A(-9+x,-1+y,z)             16/32  50% 405ms
+E[1|1]: 2A<=>2A(-9+x,-1+y,z)             17/32  53% 379ms
+E[0|1]: 1A<=>2A(-9+x,-3+y,-1+z)          18/32  56% 353ms
+E[0|0]: 1A<=>1A(-9+x,-1+y,-1+z)          19/32  59% 327ms
+E[1|1]: 2A<=>2A(-9+x,-1+y,-1+z)          20/32  62% 302ms
+E[0|1]: 1A<=>2A(-7+x,-5+y,-4+z)          21/32  65% 277ms
+E[0|0]: 1A<=>1A(-8+x,-4+y,-2+z)          22/32  68% 251ms
+E[1|1]: 2A<=>2A(-8+x,-4+y,-2+z)          23/32  71% 226ms
+E[0|1]: 1A<=>2A(-5+x,-8+y,z)             24/32  75% 201ms
+E[0|0]: 1A<=>1A(-9+x,-2+y,z)             25/32  78% 175ms
+E[1|1]: 2A<=>2A(-9+x,-2+y,z)             26/32  81% 150ms
+E[0|1]: 1A<=>2A(-9+x,-3+y,-2+z)          27/32  84% 124ms
+E[0|0]: 1A<=>1A(-9+x,-2+y,-1+z)          28/32  87% 99ms
+E[1|1]: 2A<=>2A(-9+x,-2+y,-1+z)          29/32  90% 74ms
+E[0|1]: 1A<=>2A(-4+x,-7+y,-5+z)          30/32  93% 49ms
+E[0|1]: 1A<=>2A(-7+x,-6+y,-3+z)          31/32  96% 25ms
+Cycle 14 lattice energy: -2709.0015095497324
+E[0|0]: 1A<=>1A(-6+x,-6+y,-4+z)          0/35   0% 
+E[1|1]: 2A<=>2A(-6+x,-6+y,-4+z)          1/35   2% 24m 29s 22ms
+E[0|1]: 1A<=>2A(-9+x,-4+y,z)             2/35   5% 4s 527ms
+E[0|0]: 1A<=>1A(-9+x,-2+y,-2+z)          3/35   8% 1s 706ms
+E[1|1]: 2A<=>2A(-9+x,-2+y,-2+z)          4/35  11% 1s 152ms
+E[0|1]: 1A<=>2A(-9+x,-4+y,-1+z)          5/35  14% 921ms
+E[0|0]: 1A<=>1A(-9+x,-3+y,z)             6/35  17% 813ms
+E[1|1]: 2A<=>2A(-9+x,-3+y,z)             7/35  20% 752ms
+E[0|1]: 1A<=>2A(-10+x,y,z)               8/35  22% 703ms
+E[0|0]: 1A<=>1A(-9+x,-3+y,-1+z)          9/35  25% 665ms
+E[1|1]: 2A<=>2A(-9+x,-3+y,-1+z)          10/35  28% 632ms
+E[0|1]: 1A<=>2A(-10+x,-1+y,z)            11/35  31% 601ms
+E[0|1]: 1A<=>2A(-10+x,-1+y,-1+z)         12/35  34% 572ms
+E[0|0]: 1A<=>1A(-8+x,-5+y,-2+z)          13/35  37% 545ms
+E[1|1]: 2A<=>2A(-8+x,-5+y,-2+z)          14/35  40% 519ms
+E[0|1]: 1A<=>2A(-8+x,-6+y,-1+z)          15/35  42% 492ms
+E[0|0]: 1A<=>1A(-9+x,-3+y,-2+z)          16/35  45% 466ms
+E[1|1]: 2A<=>2A(-9+x,-3+y,-2+z)          17/35  48% 441ms
+E[0|1]: 1A<=>2A(-10+x,-2+y,z)            18/35  51% 416ms
+E[0|1]: 1A<=>2A(-10+x,-2+y,-1+z)         19/35  54% 390ms
+E[0|0]: 1A<=>1A(-8+x,-4+y,-4+z)          20/35  57% 365ms
+E[1|1]: 2A<=>2A(-8+x,-4+y,-4+z)          21/35  60% 341ms
+E[0|1]: 1A<=>2A(-8+x,-6+y,-2+z)          22/35  62% 316ms
+E[0|0]: 1A<=>1A(-9+x,-4+y,z)             23/35  65% 291ms
+E[1|1]: 2A<=>2A(-9+x,-4+y,z)             24/35  68% 267ms
+E[0|1]: 1A<=>2A(-9+x,-5+y,z)             25/35  71% 243ms
+E[0|0]: 1A<=>1A(-9+x,-4+y,-1+z)          26/35  74% 218ms
+E[1|1]: 2A<=>2A(-9+x,-4+y,-1+z)          27/35  77% 194ms
+E[0|1]: 1A<=>2A(-10+x,-2+y,-2+z)         28/35  80% 170ms
+E[0|0]: 1A<=>1A(-9+x,-3+y,-3+z)          29/35  82% 145ms
+E[1|1]: 2A<=>2A(-9+x,-3+y,-3+z)          30/35  85% 121ms
+E[0|1]: 1A<=>2A(-10+x,-3+y,z)            31/35  88% 97ms
+E[0|0]: 1A<=>1A(-10+x,y,z)               32/35  91% 72ms
+E[1|1]: 2A<=>2A(-10+x,y,z)               33/35  94% 48ms
+E[0|1]: 1A<=>2A(-10+x,-3+y,-1+z)         34/35  97% 24ms
+Cycle 15 lattice energy: -2837.852869990011
+E[0|0]: 1A<=>1A(-10+x,-1+y,z)            0/28   0% 
+E[1|1]: 2A<=>2A(-10+x,-1+y,z)            1/28   3% 19m 39s 705ms
+E[0|1]: 1A<=>2A(-9+x,-5+y,-2+z)          2/28   7% 4s 584ms
+E[0|0]: 1A<=>1A(-10+x,-1+y,-1+z)         3/28  10% 1s 611ms
+E[1|1]: 2A<=>2A(-10+x,-1+y,-1+z)         4/28  14% 1s
+E[0|1]: 1A<=>2A(-6+x,-6+y,-6+z)          5/28  17% 779ms
+E[0|1]: 1A<=>2A(-10+x,-3+y,-2+z)         6/28  21% 670ms
+E[0|0]: 1A<=>1A(-10+x,-2+y,z)            7/28  25% 603ms
+E[1|1]: 2A<=>2A(-10+x,-2+y,z)            8/28  28% 551ms
+E[0|1]: 1A<=>2A(-9+x,-4+y,-4+z)          9/28  32% 511ms
+E[0|0]: 1A<=>1A(-10+x,-2+y,-1+z)         10/28  35% 477ms
+E[1|1]: 2A<=>2A(-10+x,-2+y,-1+z)         11/28  39% 446ms
+E[0|1]: 1A<=>2A(-8+x,-7+y,z)             12/28  42% 416ms
+E[0|0]: 1A<=>1A(-9+x,-5+y,z)             13/28  46% 388ms
+E[1|1]: 2A<=>2A(-9+x,-5+y,z)             14/28  50% 361ms
+E[0|1]: 1A<=>2A(-10+x,-4+y,z)            15/28  53% 333ms
+E[0|0]: 1A<=>1A(-9+x,-5+y,-1+z)          16/28  57% 307ms
+E[1|1]: 2A<=>2A(-9+x,-5+y,-1+z)          17/28  60% 281ms
+E[0|1]: 1A<=>2A(-10+x,-4+y,-1+z)         18/28  64% 255ms
+E[0|0]: 1A<=>1A(-10+x,-2+y,-2+z)         19/28  67% 229ms
+E[1|1]: 2A<=>2A(-10+x,-2+y,-2+z)         20/28  71% 204ms
+E[0|1]: 1A<=>2A(-10+x,-3+y,-3+z)         21/28  75% 178ms
+E[0|0]: 1A<=>1A(-10+x,-3+y,z)            22/28  78% 152ms
+E[1|1]: 2A<=>2A(-10+x,-3+y,z)            23/28  82% 128ms
+E[0|1]: 1A<=>2A(-9+x,-6+y,-1+z)          24/28  85% 102ms
+E[0|0]: 1A<=>1A(-10+x,-3+y,-1+z)         25/28  89% 76ms
+E[1|1]: 2A<=>2A(-10+x,-3+y,-1+z)         26/28  92% 52ms
+E[0|1]: 1A<=>2A(-11+x,y,z)               27/28  96% 27ms
+Cycle 16 lattice energy: -846.8295141564438
+Cycle 17 lattice energy: -846.8295141564438
+Neighbors for asymmetric molecule NaCl_0_water
+nn  id    Rn    Rc Label                         E_crys   ES_AB   ES_BA     E_S    E_nn   E_int
+===============================================================================================
+ |   0  2.85  2.85 1A<=>2A(-1+x,y,z)            -540.67 -156.57 -156.57 -313.13  163.86   63.68
+ |   0  2.85  2.85 1A<=>2A                      -540.67 -146.41 -146.41 -292.82  163.86   84.00
+Free energy estimates at T = 298 K, P = 1 atm., units: kJ/mol
+-------------------------------------------------------
+lattice energy (crystal)               -57.502  (E_lat)
+rotational free energy (molecule)        0.000  (E_rot)
+translational free energy (molecule)   -37.894  (E_trans)
+solvation free energy (molecule)      -295.067  (E_solv)
+dH sublimation                          52.546
+dS sublimation                         -37.894
+dG sublimation                          14.653
+dG solution                           -280.414
+equilibrium_constant                  1.42e+49
+log S                                   49.151
+solubility (g/L)                      3.26e+50
+Total E_int                            147.678
+Neighbors for asymmetric molecule NaCl_1_water
+nn  id    Rn    Rc Label                         E_crys   ES_AB   ES_BA     E_S    E_nn   E_int
+===============================================================================================
+ |   0  2.85  2.85 2A<=>1A                      -540.67 -146.59 -146.59 -293.18  -11.60  259.10
+ |   0  2.85  2.85 2A<=>1A(1+x,y,z)             -540.67 -137.08 -137.08 -274.15  -11.60  278.12
+Free energy estimates at T = 298 K, P = 1 atm., units: kJ/mol
+-------------------------------------------------------
+lattice energy (crystal)               -79.936  (E_lat)
+rotational free energy (molecule)        0.000  (E_rot)
+translational free energy (molecule)   -39.503  (E_trans)
+solvation free energy (molecule)      -275.759  (E_solv)
+dH sublimation                          74.980
+dS sublimation                         -39.503
+dG sublimation                          35.477
+dG solution                           -240.282
+equilibrium_constant                  1.31e+42
+log S                                   42.117
+solubility (g/L)                      4.64e+43
+Total E_int                            537.217
+Writing crystalgrower structure file to 'NaCl_cg.txt'
+Writing crystalgrower net file to 'NaCl_water_net.txt'
+Wall clock time by category (s)
+4-centre 2-electron integrals      6.631143
+3-centre 2-electron integrals      0.151676
+file input/output                  0.006242
+Initial guess                      0.009666
+MO update                          0.000502
+DIIS extrapolation                 0.000076
+DFT XC total                       0.131685
+GTO evaluation total               0.049501
+Fock build                         6.638181
+Solvation                          0.033317
+Global (total time)                8.726728
+A job well done

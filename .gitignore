@@ -1,0 +1,17 @@
+# Local OCC installation
+bin/
+share/
+
+# Calculation outputs
+*.owf.json
+*.fchk
+*.out
+*.log
+*_dimers/
+*.txt
+
+# Temporary files
+*.tmp
+.DS_Store
+__pycache__/
+*.pyc

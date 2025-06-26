@@ -1,0 +1,6 @@
+[pair]
+monomer_a = "A.owf.json"
+monomer_b = "B.owf.json"
+model = "ce-1p"
+# modify the translation either by hand or via a script
+translation_b = [0.0, 1.0, 0.0]

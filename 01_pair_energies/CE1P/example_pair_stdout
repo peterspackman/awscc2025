@@ -1,0 +1,37 @@
+Monomer A energies
+E_coul          46.833263689571
+E_ex            -8.940476477416
+E_nn             9.156714133102
+E_en          -198.493184104007
+E_kin           75.484504213323
+E_1e          -123.008679890684
+E_ecp            0.000000000000
+
+Monomer B energies
+E_coul          46.848157341271
+E_ex            -8.942332673874
+E_nn             9.172591154350
+E_en          -198.527396306687
+E_kin           75.489646718925
+E_1e          -123.037749587761
+E_ecp            0.000000000000
+
+Dimer
+Component              Energy (kJ/mol)
+
+Coulomb                 -31.569102
+Exchange                -27.320883
+Repulsion                50.248193
+Polarization             -4.068470
+Dispersion               -1.755652
+__________________________________
+Total 		        -24.694522
+Wall clock time by category (s)
+4-centre 2-electron integrals      0.027829
+3-centre 2-electron integrals      0.000419
+file input/output                  0.002357
+GTO evaluation total               0.022326
+Fock build                         0.027831
+XDM dispersion                     0.061041
+Global (total time)                0.104203
+A job well done
