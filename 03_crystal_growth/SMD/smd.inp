@@ -1,3 +1,4 @@
-! wB97M-V DEF2-SVP SMD(WATER)
+! b3lyp def2-svp SMD(ethanol)
 
 * XYZFILE 0 1 paracetamol.xyz
+

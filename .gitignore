@@ -15,3 +15,8 @@ share/
 .DS_Store
 __pycache__/
 *.pyc
+wbo
+charges
+*.stdout
+xtbtopo.mol
+xtbrestart

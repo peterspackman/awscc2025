@@ -1,3 +1,7 @@
-! wB97M-V DEF2-SVP
+! b3lyp def2-svp
 
 * XYZFILE 0 1 paracetamol.xyz
+
+%pal
+nprocs 6
+end
