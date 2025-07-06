@@ -1,0 +1,288 @@
+Enforcing asymmetry via partitioning:   false
+Enforcing unit cell molecules in gamma: true
+Found 1 symmetry unique molecule
+index label                          formula
+0     1A                             C8H9NO2
+Geometry for molecule 0 (1A)
+sym     x          y          z     
+ C   17.970862   6.300687  10.236072
+ C   20.351687   6.327332   9.122065
+ C   22.243053   4.717966   9.992270
+ C   21.766010   3.090836  11.986138
+ C   19.400052   3.097941  13.139974
+ C   17.534194   4.691321  12.262527
+ C   15.553819   9.000728   7.238029
+ C   13.121385  10.473316   7.029228
+ H   20.655068   7.478402   7.833051
+ H   23.953138   4.831652   9.293451
+ H   19.088395   2.007267  14.531578
+ H   15.887070   4.689544  13.022901
+ H   23.334980   0.976988  14.290189
+ H   14.596207   8.011305  10.548670
+ H   12.498206  10.356077   5.358821
+ H   12.305618  10.533711   8.472730
+ H   13.569883  12.452161   6.976123
+ N   15.923640   7.879856   9.480527
+ O   23.689302   1.511668  12.745304
+ O   17.073588   8.840857   5.481929
+===============================  Input  ================================
+Method string                       b3lyp
+Basis name                       def2-svp
+Shell kind                      Cartesian
+Net charge                              0
+Multiplicity                            1
+Geometry '' (au)  ------------------------------------------------------
+ C     17.970862     6.300687    10.236072
+ C     20.351687     6.327332     9.122065
+ C     22.243053     4.717966     9.992270
+ C     21.766010     3.090836    11.986138
+ C     19.400052     3.097941    13.139974
+ C     17.534194     4.691321    12.262527
+ C     15.553819     9.000728     7.238029
+ C     13.121385    10.473316     7.029228
+ H     20.655068     7.478402     7.833051
+ H     23.953138     4.831652     9.293451
+ H     19.088395     2.007267    14.531578
+ H     15.887070     4.689544    13.022901
+ H     23.334980     0.976988    14.290189
+ H     14.596207     8.011305    10.548670
+ H     12.498206    10.356077     5.358821
+ H     12.305618    10.533711     8.472730
+ H     13.569883    12.452161     6.976123
+ N     15.923640     7.879856     9.480527
+ O     23.689302     1.511668    12.745304
+ O     17.073588     8.840857     5.481929
+Inertia tensor (x 10e-46 kg m^2)  --------------------------------------
+  102.160378    56.014372   -35.486246
+   56.014372   117.118025    45.751083
+  -35.486246    45.751083   129.115111
+Principal moments of inertia  ------------------------------------------
+   22.566282   152.587752   173.239481
+Rotational constants (GHz)  --------------------------------------------
+    3.718830     0.549980     0.484417
+
+
+Gas-phase properties (at 298.15 K)  ------------------------------------
+Rotational free energy        -32.495080 kJ/mol
+Translational free energy     -44.918748 kJ/mol
+Loaded basis set: cartesian
+Number of shells:            93
+Number of  basis functions:  210
+Maximum angular momentum:    2
+DFT method string: b3lyp
+Functionals:
+Loaded 40 DFT method definitions from /Users/285699f/git/awscc_workshop_2025/share/occ/methods/dft_methods.json
+    hyb_gga_xc_b3lyp
+finished calculating atom grids (206362 points)
+Spinorbital kind: restricted
+Including potential from 0 point charges
+Computing core hamiltonian
+Computing initial guess using SOAD in minimal basis
+starting restricted scf iterations
+   #         E (Hartrees)       |dE|/E max|FDS-SDF|     T (s)
+   1    -514.590663674170  6.80441e-01  9.89304e-02  1.72e+00
+   2    -514.043891077900  5.00127e-04  3.31904e-01  1.71e+00
+   3    -512.961847489097  9.90714e-04  4.43117e-01  1.65e+00
+   4    -514.947239225796  1.81452e-03  3.46142e-02  1.68e+00
+   5    -514.953954201717  6.13701e-06  1.86064e-02  1.60e+00
+   6    -514.958821081176  4.44796e-06  4.38432e-03  1.58e+00
+   7    -514.959163887837  3.13299e-07  9.15160e-04  1.62e+00
+   8    -514.959200534858  3.34926e-08  2.15774e-04  1.61e+00
+   9    -514.959202662256  1.94428e-09  6.88171e-05  1.61e+00
+  10    -514.959202686132  2.18203e-11  4.87428e-05  1.63e+00
+  11    -514.959202744301  5.31625e-11  7.64995e-06  1.62e+00
+restricted spinorbital SCF energy converged after 18.02526 seconds
+
+Component                            Energy (Hartree)
+
+nuclear  ---------------------------------------------------------------
+nuclear.repulsion                    579.223749642061
+nuclear.point_charge                   0.000000000000
+nuclear.total                        579.223749642061
+electronic  ------------------------------------------------------------
+electronic.kinetic                   510.021540613863
+electronic.nuclear                 -2356.878213317294
+electronic.1e                      -1846.856672703435
+electronic                         -1094.182952386363
+electronic.2e                        752.673720317073
+electronic.dft_xc                    -57.635142389196
+
+
+total                               -514.959202744301
+
+wavefunction stored in paracetamol_0.owf.json
+Gas phase wavefunctions took 18.318871 seconds
+DFT method string: b3lyp
+Functionals:
+Loaded 40 DFT method definitions from /Users/285699f/git/awscc_workshop_2025/share/occ/methods/dft_methods.json
+    hyb_gga_xc_b3lyp
+finished calculating atom grids (206362 points)
+Using SMD solvent 'water'
+Parameters:
+Dielectric                      78.3550
+Intrinsic coulomb radii (4 atom types)
+C           3.495993
+H           2.267671
+N           3.571582
+O           2.872384
+CDS radii
+C           3.968425
+H           3.023562
+N           3.684966
+O           3.628274
+solvent surface:
+total surface area (coulomb) =    171.082 Angstroms^2, 833 finite elements
+total surface area (cds)     =    211.549 Angstroms^2, 759 finite elements
+CDS energy: 4.7903
+CDS energy (molecular): 0.0000
+Computing core hamiltonian
+Computing initial guess using SOAD in minimal basis
+starting restricted scf iterations
+   #         E (Hartrees)       |dE|/E max|FDS-SDF|     T (s)
+   1    -514.643205169702  6.81300e-01  8.62208e-02  2.09e+00
+   2    -514.455216289409  1.41537e-03  2.31850e-01  2.09e+00
+   3    -513.962171128742  2.32086e-03  3.47934e-01  1.99e+00
+   4    -514.978789151331  1.97074e-03  7.49639e-03  1.98e+00
+   5    -514.978528548336  3.01156e-05  1.02831e-02  1.99e+00
+   6    -514.979891051472  3.05241e-05  1.37458e-03  1.98e+00
+   7    -514.979903922190  6.17942e-06  5.30007e-04  2.00e+00
+   8    -514.979909247996  3.06195e-06  6.40984e-05  2.06e+00
+   9    -514.979909435155  1.60749e-07  4.77059e-05  2.07e+00
+  10    -514.979909463466  1.84904e-07  9.20352e-06  2.02e+00
+restricted spinorbital SCF energy converged after 20.26341 seconds
+
+Component                            Energy (Hartree)
+
+nuclear  ---------------------------------------------------------------
+nuclear.repulsion                    579.223749642061
+electronic  ------------------------------------------------------------
+electronic.kinetic                   510.002413255174
+electronic.nuclear                 -2357.220388741975
+electronic.1e                      -1847.466827900501
+electronic                         -1094.424364521931
+electronic.2e                        753.042463378570
+electronic.dft_xc                    -57.645214437508
+solvation  -------------------------------------------------------------
+solvation.electronic                  -0.248852413706
+solvation.nuclear                      0.177290875375
+solvation.surface                      0.035780769165
+solvation.CDS                          0.007633771864
+
+
+total                               -514.979909463466
+
+SCF difference         (au)          -0.021
+Writing solvated surface properties to paracetamol_0_water_surface.json
+Writing solvated wavefunction to paracetamol_0_water.owf.json
+wavefunction stored in paracetamol_0_water.owf.json
+Solution phase wavefunctions took 21.454101 seconds
+Computing monomer energies for gas phase
+Computing monomer energies for solution phase
+Computing monomer energies took 2.552086 seconds
+Computing crystal interactions using gas wavefunctions
+Found 10 symmetry unique dimers within max radius 4.100
+E[0|0]: 1A<=>1A(-1/2+x,1/2-y,-1+z)       0/8   0% 
+E[0|0]: 1A<=>1A(-1/2+x,1/2-y,z)          1/8  12% 1m 31s 479ms
+E[0|0]: 1A<=>1A(2-x,1-y,1-z)             2/8  25% 1m 16s 705ms
+E[0|0]: 1A<=>1A(3/2-x,-1/2+y,2-z)        3/8  37% 56s 226ms
+E[0|0]: 1A<=>1A(2-x,1-y,2-z)             4/8  50% 1m 8s 121ms
+E[0|0]: 1A<=>1A(3/2-x,-1/2+y,1-z)        5/8  62% 39s 435ms
+E[0|0]: 1A<=>1A(5/2-x,-1/2+y,2-z)        6/8  75% 22s 696ms
+E[0|0]: 1A<=>1A(2-x,-y,2-z)              7/8  87% 12s 327ms
+Cycle 1 lattice energy: -113.08906485532417
+E[0|0]: 1A<=>1A(1-x,1-y,1-z)             0/2   0% 
+E[0|0]: 1A<=>1A(x,y,-1+z)                1/2  50% 12s 579ms
+Cycle 2 lattice energy: -124.25983911790573
+Cycle 3 lattice energy: -124.25983911790573
+Neighbors for asymmetric molecule paracetamol_0_water
+nn  id    Rn    Rc Label                         E_crys   ES_AB   ES_BA     E_S    E_nn   E_int
+===============================================================================================
+ |   0  1.80  7.50 1A<=>1A(-1/2+x,1/2-y,-1+z)    -31.51  -15.72  -13.45  -29.17    0.00    2.34
+ |   0  1.80  7.50 1A<=>1A(1/2+x,1/2-y,1+z)      -31.51  -13.45  -15.72  -29.17    0.00    2.34
+ |   1  2.05  6.78 1A<=>1A(-1/2+x,1/2-y,z)       -25.19  -13.72   -6.25  -19.97    0.00    5.22
+ |   1  2.05  6.78 1A<=>1A(1/2+x,1/2-y,z)        -25.19   -6.25  -13.72  -19.97    0.00    5.22
+ |   2  2.58  6.15 1A<=>1A(2-x,1-y,1-z)          -15.29   -8.08   -8.08  -16.17    0.00   -0.88
+ |   3  2.74  7.86 1A<=>1A(3/2-x,-1/2+y,2-z)      -1.61   -0.92   -0.32   -1.23    0.00    0.38
+ |   3  2.74  7.86 1A<=>1A(3/2-x,1/2+y,2-z)       -1.61   -0.32   -0.92   -1.23    0.00    0.38
+ |   4  2.75  3.53 1A<=>1A(2-x,1-y,2-z)          -36.08    1.98    1.98    3.96    0.00   40.05
+ |   5  2.80  6.86 1A<=>1A(3/2-x,-1/2+y,1-z)     -18.13   -2.24    0.40   -1.84    0.00   16.29
+ |   5  2.80  6.86 1A<=>1A(3/2-x,1/2+y,1-z)      -18.13    0.40   -2.24   -1.84    0.00   16.29
+ |   6  2.89  8.76 1A<=>1A(5/2-x,1/2+y,2-z)       -2.85    0.74    0.07    0.81    0.00    3.66
+ |   6  2.89  8.76 1A<=>1A(5/2-x,-1/2+y,2-z)      -2.85    0.07    0.74    0.81    0.00    3.66
+ |   7  3.36  7.12 1A<=>1A(2-x,-y,2-z)           -16.23    1.61    1.61    3.21    0.00   19.45
+ |   8  3.80 10.48 1A<=>1A(1-x,1-y,1-z)           -2.42    1.12    1.12    2.24    0.00    4.66
+ |   9  3.95  7.10 1A<=>1A(x,y,-1+z)              -9.96    0.17    0.24    0.41    0.00   10.37
+ |   9  3.95  7.10 1A<=>1A(x,y,1+z)               -9.96    0.24    0.17    0.41    0.00   10.37
+Free energy estimates at T = 298 K, P = 1 atm., units: kJ/mol
+-------------------------------------------------------
+lattice energy (crystal)              -124.260  (E_lat)
+rotational free energy (molecule)      -32.477  (E_rot)
+translational free energy (molecule)   -44.893  (E_trans)
+solvation free energy (molecule)       -46.458  (E_solv)
+dH sublimation                         119.304
+dS sublimation                         -77.370
+dG sublimation                          41.935
+dG solution                             -4.523
+equilibrium_constant                  6.21e+00
+log S                                    0.793
+solubility (g/L)                      9.38e+02
+Total E_int                            139.789
+Writing crystalgrower structure file to 'paracetamol_cg.txt'
+Crystal surface energies (solvated)
+(1 0 0) spacing = 0.086 area = 66.740
+(1 0 0) cut =  0.250, energy =  0.080976
+(0 1 0) spacing = 0.106 area = 82.582
+(0 1 0) cut =  0.250, energy =  0.095165
+(1 1 0) spacing = 0.137 area = 106.179
+(1 1 0) cut =  0.000, energy =  0.081307
+(1 -1 0) spacing = 0.137 area = 106.179
+(1 -1 0) cut =  0.000, energy =  0.081307
+(0 0 1) spacing = 0.157 area = 121.542
+(0 0 1) cut =  0.500, energy =  0.084410
+(2 0 -1) spacing = 0.175 area = 135.707
+(2 0 -1) cut =  0.500, energy =  0.052657
+(0 1 1) spacing = 0.189 area = 146.943
+(0 1 1) cut =  0.500, energy =  0.087449
+(0 1 -1) spacing = 0.189 area = 146.943
+(0 1 -1) cut =  0.000, energy =  0.087449
+(2 1 0) spacing = 0.202 area = 156.961
+(2 1 0) cut =  0.500, energy =  0.083637
+(2 -1 0) spacing = 0.202 area = 156.961
+(2 -1 0) cut =  0.000, energy =  0.083637
+Crystal surface energies (vacuum)
+(1 0 0) spacing = 0.086 area = 66.740
+(1 0 0) cut =  0.250, energy =  0.203286
+(0 1 0) spacing = 0.106 area = 82.582
+(0 1 0) cut =  0.000, energy =  0.115813
+(1 1 0) spacing = 0.137 area = 106.179
+(1 1 0) cut =  0.000, energy =  0.153162
+(1 -1 0) spacing = 0.137 area = 106.179
+(1 -1 0) cut =  0.000, energy =  0.153162
+(0 0 1) spacing = 0.157 area = 121.542
+(0 0 1) cut =  0.500, energy =  0.187041
+(2 0 -1) spacing = 0.175 area = 135.707
+(2 0 -1) cut =  0.500, energy =  0.118593
+(0 1 1) spacing = 0.189 area = 146.943
+(0 1 1) cut =  0.500, energy =  0.158809
+(0 1 -1) spacing = 0.189 area = 146.943
+(0 1 -1) cut =  0.000, energy =  0.158809
+(2 1 0) spacing = 0.202 area = 156.961
+(2 1 0) cut =  0.500, energy =  0.189482
+(2 -1 0) spacing = 0.202 area = 156.961
+(2 -1 0) cut =  0.000, energy =  0.189482
+Appending surface energies to json output
+Writing crystalgrower net file to 'paracetamol_water_net.txt'
+Wall clock time by category (s)
+4-centre 2-electron integrals    413.554333
+3-centre 2-electron integrals     12.149278
+file input/output                  0.056329
+Initial guess                      0.346149
+MO update                          0.105032
+DIIS extrapolation                 0.002527
+DFT XC total                       7.798661
+GTO evaluation total              14.178994
+Fock build                       137.417029
+XDM dispersion                    15.084451
+Solvation                          3.331791
+Global (total time)              168.367007
+A job well done
