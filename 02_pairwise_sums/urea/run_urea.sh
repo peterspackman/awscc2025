@@ -76,7 +76,7 @@ fi
 E_lat_per_mol=$(echo "$E_lat_unit / $n_molecules" | bc -l)
 
 # X23 reference value
-X23_ref=102.1
+X23_ref=-102.1
 
 echo "========================================="
 echo "LATTICE ENERGY ANALYSIS"

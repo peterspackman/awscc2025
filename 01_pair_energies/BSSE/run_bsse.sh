@@ -6,6 +6,18 @@ usage() {
     echo ""
     echo "Runs ORCA BSSE calculation using bsse.inp file"
     echo "This script only works with ORCA"
+    echo ""
+    echo "To customize the calculation:"
+    echo "  - Method/basis: Edit the '! wb97x def2-qzvp' lines in bsse.inp"
+    echo "  - Geometry: Modify the coordinate blocks in bsse.inp"
+    echo "  - Other settings: Add ORCA keywords/blocks to bsse.inp"
+    echo ""
+    echo "The input file contains multiple jobs for BSSE correction:"
+    echo "  1. Monomer A alone"
+    echo "  2. Monomer B alone"
+    echo "  3. Dimer AB"
+    echo "  4. Monomer A with ghost atoms of B"
+    echo "  5. Monomer B with ghost atoms of A"
     exit 1
 }
 
