@@ -5,7 +5,7 @@
 # First the monomer. In principle, you only need
 # to run it once, but we keep it for clarity.
 # --------------------------------------------
-! wb97x def2-qzvp VeryTightSCF PModel
+! hf 3-21g VeryTightSCF PModel
 %id "monomer"
 * xyz 0 1
 O   -0.702196054  -0.056060256   0.009942262
@@ -14,7 +14,7 @@ H    0.257521062   0.042121496   0.005218999
 *
 
 $new_job
-! wb97x def2-qzvp VeryTightSCF PModel
+! hf 3-21g VeryTightSCF PModel
 %id "monomer"
 * xyz 0 1
 O    2.220871067   0.026716792   0.000620476
@@ -26,7 +26,7 @@ H    2.593135384  -0.449496183  -0.744782026
 # now the dimer
 # --------------------------------------------
 $new_job
-! wb97x def2-qzvp VeryTightSCF PModel
+! hf 3-21g VeryTightSCF PModel
 %id "dimer"
 * xyz 0 1
 O   -0.702196054  -0.056060256   0.009942262
@@ -42,7 +42,7 @@ H    2.593135384  -0.449496183  -0.744782026
 # dimer geometry but with the dimer basis set
 # --------------------------------------------
 $new_job
-! wb97x def2-qzvp VeryTightSCF PModel
+! hf 3-21g VeryTightSCF PModel
 %id "monomer_ghost"
 * xyz 0 1
 O   -0.702196054  -0.056060256   0.009942262
@@ -54,7 +54,7 @@ H:   2.593135384  -0.449496183  -0.744782026
 *
 
 $new_job
-! wb97x def2-qzvp VeryTightSCF PModel
+! hf 3-21g VeryTightSCF PModel
 %id "monomer_ghost"
 * xyz 0 1
 O:  -0.702196054  -0.056060256   0.009942262

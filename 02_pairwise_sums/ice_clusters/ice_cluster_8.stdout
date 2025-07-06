@@ -92,7 +92,7 @@
    J. Seibert, P. Shushkov, S. Spicher, M. Stahn, M. Steiner, T. Strunk,
    J. Stückrath, T. Rose, and J. Unsleber
    
- * started run on 2025/07/06 at 13:14:04.905     
+ * started run on 2025/07/06 at 17:07:26.970     
    ID    Z sym.   atoms
     1    1 H      1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23,
                   25, 26, 28, 29, 31, 32, 34, 35, 37, 38, 40, 41, 43, 44, 46,
@@ -223,14 +223,14 @@ constraining FC (au)   :  0.0500
                   HL-Gap            0.0277776 Eh            0.7559 eV
              Fermi-level           -0.2120620 Eh           -5.7705 eV
 
- SCC (total)                   0 d,  0 h,  0 min,  1.350 sec
- SCC setup                      ...        0 min,  0.003 sec (  0.226%)
- Dispersion                     ...        0 min,  0.006 sec (  0.461%)
- classical contributions        ...        0 min,  0.004 sec (  0.262%)
- integral evaluation            ...        0 min,  0.051 sec (  3.753%)
- iterations                     ...        0 min,  0.504 sec ( 37.370%)
- molecular gradient             ...        0 min,  0.774 sec ( 57.351%)
- printout                       ...        0 min,  0.008 sec (  0.575%)
+ SCC (total)                   0 d,  0 h,  0 min,  1.335 sec
+ SCC setup                      ...        0 min,  0.003 sec (  0.239%)
+ Dispersion                     ...        0 min,  0.006 sec (  0.481%)
+ classical contributions        ...        0 min,  0.004 sec (  0.273%)
+ integral evaluation            ...        0 min,  0.051 sec (  3.857%)
+ iterations                     ...        0 min,  0.503 sec ( 37.672%)
+ molecular gradient             ...        0 min,  0.760 sec ( 56.926%)
+ printout                       ...        0 min,  0.007 sec (  0.552%)
 
          :::::::::::::::::::::::::::::::::::::::::::::::::::::
          ::                     SUMMARY                     ::
@@ -912,14 +912,14 @@ molecular quadrupole (traceless):
 ########################################################################
 
 ------------------------------------------------------------------------
- * finished run on 2025/07/06 at 13:14:06.326     
+ * finished run on 2025/07/06 at 17:07:28.379     
 ------------------------------------------------------------------------
  total:
- * wall-time:     0 d,  0 h,  0 min,  1.421 sec
- *  cpu-time:     0 d,  0 h,  0 min,  1.419 sec
- * ratio c/w:     0.999 speedup
+ * wall-time:     0 d,  0 h,  0 min,  1.409 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  1.405 sec
+ * ratio c/w:     0.997 speedup
  SCF:
- * wall-time:     0 d,  0 h,  0 min,  1.351 sec
- *  cpu-time:     0 d,  0 h,  0 min,  1.351 sec
+ * wall-time:     0 d,  0 h,  0 min,  1.336 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  1.336 sec
  * ratio c/w:     1.000 speedup
 

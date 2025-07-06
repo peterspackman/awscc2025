@@ -92,7 +92,7 @@
    J. Seibert, P. Shushkov, S. Spicher, M. Stahn, M. Steiner, T. Strunk,
    J. Stückrath, T. Rose, and J. Unsleber
    
- * started run on 2025/07/06 at 13:14:04.820     
+ * started run on 2025/07/06 at 17:07:26.870     
    ID    Z sym.   atoms
     1    1 H      1, 2
     2    8 O      3
@@ -181,14 +181,14 @@
                   HL-Gap            0.4574008 Eh           12.4465 eV
              Fermi-level           -0.2153065 Eh           -5.8588 eV
 
- SCC (total)                   0 d,  0 h,  0 min,  0.001 sec
- SCC setup                      ...        0 min,  0.000 sec ( 11.648%)
- Dispersion                     ...        0 min,  0.000 sec (  2.081%)
- classical contributions        ...        0 min,  0.000 sec (  1.041%)
- integral evaluation            ...        0 min,  0.000 sec (  7.889%)
- iterations                     ...        0 min,  0.000 sec ( 55.455%)
- molecular gradient             ...        0 min,  0.000 sec ( 13.931%)
- printout                       ...        0 min,  0.000 sec (  7.217%)
+ SCC (total)                   0 d,  0 h,  0 min,  0.002 sec
+ SCC setup                      ...        0 min,  0.000 sec (  8.122%)
+ Dispersion                     ...        0 min,  0.000 sec (  2.711%)
+ classical contributions        ...        0 min,  0.000 sec (  1.057%)
+ integral evaluation            ...        0 min,  0.000 sec (  5.924%)
+ iterations                     ...        0 min,  0.002 sec ( 72.127%)
+ molecular gradient             ...        0 min,  0.000 sec (  6.008%)
+ printout                       ...        0 min,  0.000 sec (  3.632%)
 
          :::::::::::::::::::::::::::::::::::::::::::::::::::::
          ::                     SUMMARY                     ::
@@ -265,21 +265,16 @@ molecular quadrupole (traceless):
           | GRADIENT NORM               0.065845930006 Eh/α |
           | HOMO-LUMO GAP              12.446510359095 eV   |
            -------------------------------------------------
-########################################################################
-[WARNING] Runtime exception occurred
--2- restart_readRestart: Dimension missmatch in restart file.
--1- restart_readRestart: Number of electron missmatch in restart file.
-########################################################################
 
 ------------------------------------------------------------------------
- * finished run on 2025/07/06 at 13:14:04.828     
+ * finished run on 2025/07/06 at 17:07:26.884     
 ------------------------------------------------------------------------
  total:
- * wall-time:     0 d,  0 h,  0 min,  0.007 sec
- *  cpu-time:     0 d,  0 h,  0 min,  0.006 sec
- * ratio c/w:     0.851 speedup
+ * wall-time:     0 d,  0 h,  0 min,  0.012 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  0.009 sec
+ * ratio c/w:     0.746 speedup
  SCF:
- * wall-time:     0 d,  0 h,  0 min,  0.001 sec
- *  cpu-time:     0 d,  0 h,  0 min,  0.001 sec
- * ratio c/w:     1.000 speedup
+ * wall-time:     0 d,  0 h,  0 min,  0.002 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  0.002 sec
+ * ratio c/w:     0.658 speedup
 

@@ -81,17 +81,19 @@ run_orca() {
     echo -n "A: "
     orca A.inp | tee A.stdout
     E_A=$(grep "FINAL SINGLE POINT ENERGY" A.stdout | awk '{print $5}')
-    echo "total                                $E_A"
     
     echo -n "B: "
     orca B.inp | tee B.stdout
     E_B=$(grep "FINAL SINGLE POINT ENERGY" B.stdout | awk '{print $5}')
-    echo "total                                $E_B"
     
     echo -n "AB: "
     orca AB.inp | tee AB.stdout
     E_AB=$(grep "FINAL SINGLE POINT ENERGY" AB.stdout | awk '{print $5}')
-    echo "total                               $E_AB"
+
+    echo "total A                               $E_A"
+    echo "total B                               $E_B"
+    echo "total AB                              $E_AB"
+
     
     # Calculate interaction energy in hartree
     E_int=$(echo "$E_AB - $E_A - $E_B" | bc -l)
@@ -110,15 +112,16 @@ run_occ() {
     
     echo -n "A: "
     E_A=$(occ scf A.xyz --threads=${THREADS} ${METHOD} ${BASIS} | tee A.stdout | grep '^total' | awk '{print $2}')
-    echo "total                                $E_A"
 
     echo -n "B: "  
     E_B=$(occ scf B.xyz --threads=${THREADS} ${METHOD} ${BASIS} | tee B.stdout | grep '^total' | awk '{print $2}')
-    echo "total                                $E_B"
 
     echo -n "AB: "
     E_AB=$(occ scf AB.xyz --threads=${THREADS} ${METHOD} ${BASIS} | tee AB.stdout | grep '^total' | awk '{print $2}')
-    echo "total                               $E_AB"
+
+    echo "total A                               $E_A"
+    echo "total B                               $E_B"
+    echo "total AB                              $E_AB"
 
     # Calculate interaction energy in hartree
     E_int=$(echo "$E_AB - $E_A - $E_B" | bc -l)
