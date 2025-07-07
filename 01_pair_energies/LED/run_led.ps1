@@ -24,7 +24,7 @@ function Show-Usage {
     Write-Host "LED analysis decomposes interaction energy into:"
     Write-Host "  - Electrostatic, exchange, repulsion, and dispersion components"
     Write-Host "  - Orbital interaction terms"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

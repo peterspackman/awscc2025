@@ -25,7 +25,7 @@ function Show-Usage {
     Write-Host "  - Additional radii: Add loops for different cluster sizes"
     Write-Host ""
     Write-Host "Results show how interaction energies converge with cluster size"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

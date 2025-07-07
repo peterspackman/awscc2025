@@ -26,7 +26,7 @@ function Show-Usage {
     Write-Host "  1. SCF calculation on monomer A"
     Write-Host "  2. SCF calculation on monomer B"
     Write-Host "  3. CE-1P pair interaction calculation"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

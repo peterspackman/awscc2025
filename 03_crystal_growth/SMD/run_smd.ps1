@@ -38,7 +38,7 @@ function Show-Usage {
     Write-Host "  - Solvation free energy (ΔG_solv)"
     Write-Host ""
     Write-Host "If --program is not specified, will try orca first, then occ, then xtb"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

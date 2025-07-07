@@ -35,7 +35,7 @@ function Show-Usage {
     Write-Host "  - Surface energies for different crystal faces"
     Write-Host "  - Growth morphology predictions"
     Write-Host "  - Solvent effects on crystal growth"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

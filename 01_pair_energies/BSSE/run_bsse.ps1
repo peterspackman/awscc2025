@@ -21,7 +21,7 @@ function Show-Usage {
     Write-Host "  3. Dimer AB"
     Write-Host "  4. Monomer A with ghost atoms of B"
     Write-Host "  5. Monomer B with ghost atoms of A"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

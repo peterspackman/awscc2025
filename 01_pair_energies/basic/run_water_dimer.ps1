@@ -16,7 +16,7 @@ function Show-Usage {
     Write-Host "  --threads: Number of threads (default: 1)"
     Write-Host ""
     Write-Host "If --program is not specified, will try orca first, then occ"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

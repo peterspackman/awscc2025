@@ -30,7 +30,7 @@ function Show-Usage {
     Write-Host ""
     Write-Host "Note: This shows limitations of simple pairwise summation"
     Write-Host "      for ionic systems with long-range interactions"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

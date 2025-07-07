@@ -27,7 +27,7 @@ function Show-Usage {
     Write-Host "  - Compare calculated lattice energy to experimental reference"
     Write-Host "  - X23 reference: 102.1 kJ/mol (vibrational corrected)"
     Write-Host "  - Assess accuracy of pairwise interaction model"
-    exit 1
+    exit 0
 }
 
 if ($Help) {

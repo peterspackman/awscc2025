@@ -27,7 +27,7 @@ function Show-Usage {
     Write-Host "  - Lattice energy ~125 kJ/mol (for asymmetric unit)"
     Write-Host "  - Divide by 2 for per-molecule lattice energy (~62.8 kJ/mol)"
     Write-Host "  - Compare to experimental sublimation enthalpy ~54 kJ/mol"
-    exit 1
+    exit 0
 }
 
 if ($Help) {
