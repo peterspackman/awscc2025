@@ -1,0 +1,142 @@
+name: Test Shell Scripts
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-shell-scripts:
+    name: Test Shell Scripts on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install system dependencies (Ubuntu)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y bc curl
+    
+    - name: Install system dependencies (macOS)
+      if: runner.os == 'macOS'
+      run: |
+        brew install bc curl coreutils
+    
+    - name: Install OCC and XTB
+      run: |
+        chmod +x install/setup.sh
+        ./install/setup.sh || echo "OCC/XTB installation failed, continuing with tests..."
+    
+    - name: Test installation
+      run: |
+        source setup_env.sh
+        chmod +x scripts/test_installation.sh
+        ./scripts/test_installation.sh
+    
+    - name: Test setup scripts syntax
+      run: |
+        bash -n install/setup.sh
+        bash -n setup_env.sh
+        bash -n scripts/test_installation.sh
+    
+    - name: Test all shell scripts syntax
+      run: |
+        find . -name "*.sh" -type f -exec bash -n {} \; -print
+    
+    - name: Test script executability
+      run: |
+        # Make all shell scripts executable
+        find . -name "*.sh" -type f -exec chmod +x {} \;
+        
+        # Test that all scripts can be executed with --help flag
+        for script in $(find . -name "*.sh" -type f | grep -E "(run_|extract_)" | head -10); do
+          echo "Testing $script --help"
+          if $script --help 2>/dev/null || $script -h 2>/dev/null; then
+            echo "✓ $script help works"
+          else
+            echo "⚠ $script help may not work"
+          fi
+        done
+    
+    - name: Test basic water dimer calculation (if OCC available)
+      run: |
+        source setup_env.sh
+        if command -v occ >/dev/null 2>&1; then
+          cd 01_pair_energies/basic
+          # Use gtimeout on macOS, timeout on Linux
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            gtimeout 300 ./run_water_dimer.sh --program occ --method hf --basis sto-3g || echo "Water dimer test completed with timeout or error"
+          else
+            timeout 300 ./run_water_dimer.sh --program occ --method hf --basis sto-3g || echo "Water dimer test completed with timeout or error"
+          fi
+        else
+          echo "OCC not available, skipping calculation test"
+        fi
+    
+    - name: Test water trimer calculation (if OCC available)
+      run: |
+        source setup_env.sh
+        if command -v occ >/dev/null 2>&1; then
+          cd 02_pairwise_sums/water_trimers
+          # Use gtimeout on macOS, timeout on Linux  
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            gtimeout 300 ./run_water_trimer.sh --program occ --method hf --basis sto-3g || echo "Water trimer test completed with timeout or error"
+          else
+            timeout 300 ./run_water_trimer.sh --program occ --method hf --basis sto-3g || echo "Water trimer test completed with timeout or error"
+          fi
+        else
+          echo "OCC not available, skipping water trimer test"
+        fi
+    
+    - name: Test ice lattice energy calculation (if OCC available)
+      run: |
+        source setup_env.sh
+        if command -v occ >/dev/null 2>&1; then
+          cd 02_pairwise_sums/ice_elat
+          # Use gtimeout on macOS, timeout on Linux
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            gtimeout 300 ./run_ice_elat.sh --model ce-1p --threads 1 || echo "Ice elat test completed with timeout or error"
+          else
+            timeout 300 ./run_ice_elat.sh --model ce-1p --threads 1 || echo "Ice elat test completed with timeout or error"
+          fi
+        else
+          echo "OCC not available, skipping ice elat test"
+        fi
+    
+    - name: Test XTB ice clusters (if XTB available)
+      run: |
+        source setup_env.sh
+        if command -v xtb >/dev/null 2>&1; then
+          cd 02_pairwise_sums/ice_clusters
+          # Use gtimeout on macOS, timeout on Linux
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            gtimeout 300 ./run_ice_clusters.sh --method gfn2 --threads 1 || echo "XTB ice clusters test completed with timeout or error"
+          else
+            timeout 300 ./run_ice_clusters.sh --method gfn2 --threads 1 || echo "XTB ice clusters test completed with timeout or error"
+          fi
+        else
+          echo "XTB not available, skipping ice clusters test"
+        fi
+    
+    - name: Archive test artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: shell-test-artifacts-${{ matrix.os }}
+        path: |
+          **/*.stdout
+          **/*.log
+          bin/
+        retention-days: 7

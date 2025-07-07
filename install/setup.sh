@@ -26,7 +26,7 @@ case "$OS" in
         ;;
     "linux")
         if [[ "$ARCH" == "x86_64" ]]; then
-            PLATFORM_SUFFIX="linux-x86_64"
+            PLATFORM_SUFFIX="linux-x86_64-static"
         else
             echo "Unsupported Linux architecture: $ARCH"
             exit 1
@@ -43,12 +43,14 @@ echo "Detected platform: $PLATFORM_SUFFIX"
 
 # Get latest release info from GitHub API
 echo "Fetching latest OCC release information..."
-LATEST_RELEASE=$(curl -s https://api.github.com/repos/peterspackman/occ/releases/latest)
+LATEST_RELEASE=$(curl -s --max-time 30 https://api.github.com/repos/peterspackman/occ/releases/latest)
 VERSION=$(echo "$LATEST_RELEASE" | grep '"tag_name"' | sed 's/.*"tag_name": *"\([^"]*\)".*/\1/')
 
 if [[ -z "$VERSION" ]]; then
-    echo "Failed to get latest version. Exiting..."
-    exit 1
+    echo "Failed to get latest version from GitHub API. Using fallback version..."
+    # Fallback to a known working version
+    VERSION="v0.7.6"
+    echo "Using fallback OCC version: $VERSION"
 fi
 
 # Remove 'v' prefix from version if present

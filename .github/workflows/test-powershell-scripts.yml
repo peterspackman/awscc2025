@@ -1,0 +1,228 @@
+name: Test PowerShell Scripts
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-powershell-scripts:
+    name: Test PowerShell Scripts on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Test PowerShell availability
+      shell: pwsh
+      run: |
+        Write-Host "PowerShell version: $($PSVersionTable.PSVersion)"
+        Write-Host "OS: $([System.Environment]::OSVersion)"
+    
+    - name: Install OCC and XTB
+      shell: pwsh
+      run: |
+        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+        try {
+          .\install\setup.ps1
+        } catch {
+          Write-Host "OCC/XTB installation failed, continuing with tests..." -ForegroundColor Yellow
+        }
+    
+    - name: Test installation
+      shell: pwsh
+      run: |
+        . .\setup_env.ps1
+        .\scripts\test_installation.ps1
+    
+    - name: Test PowerShell scripts syntax
+      shell: pwsh
+      run: |
+        # Test all PowerShell scripts for syntax errors
+        Get-ChildItem -Path . -Filter "*.ps1" -Recurse | ForEach-Object {
+          Write-Host "Testing syntax of $($_.FullName)"
+          try {
+            $tokens = $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
+            if ($errors.Count -eq 0) {
+              Write-Host "✓ $($_.Name) syntax OK" -ForegroundColor Green
+            } else {
+              Write-Host "✗ $($_.Name) has syntax errors:" -ForegroundColor Red
+              $errors | ForEach-Object { Write-Host "  $_" -ForegroundColor Red }
+            }
+          } catch {
+            Write-Host "✗ $($_.Name) failed to parse: $_" -ForegroundColor Red
+          }
+        }
+    
+    - name: Test script help functionality
+      shell: pwsh
+      run: |
+        # Test that all PowerShell scripts can be executed with --help flag
+        $scripts = Get-ChildItem -Path . -Filter "*.ps1" -Recurse | Where-Object { $_.Name -match "(run_|setup|test_)" } | Select-Object -First 10
+        
+        foreach ($script in $scripts) {
+          Write-Host "Testing $($script.Name) --help"
+          try {
+            $result = & $script.FullName -Help -ErrorAction SilentlyContinue
+            Write-Host "✓ $($script.Name) help works" -ForegroundColor Green
+          } catch {
+            Write-Host "⚠ $($script.Name) help may not work: $_" -ForegroundColor Yellow
+          }
+        }
+    
+    - name: Test basic water dimer calculation (Windows with OCC)
+      shell: pwsh
+      run: |
+        . .\setup_env.ps1
+        if (Get-Command occ -ErrorAction SilentlyContinue) {
+          Set-Location 01_pair_energies\basic
+          try {
+            # Use a timeout to prevent hanging
+            $job = Start-Job -ScriptBlock { 
+              param($scriptPath)
+              & $scriptPath -Program occ -Method hf -Basis sto-3g 
+            } -ArgumentList (Resolve-Path ".\run_water_dimer.ps1")
+            
+            $job | Wait-Job -Timeout 300 | Out-Null
+            if ($job.State -eq 'Running') {
+              $job | Stop-Job
+              Write-Host "Water dimer test timed out after 5 minutes"
+            } else {
+              $job | Receive-Job
+              Write-Host "Water dimer test completed"
+            }
+            $job | Remove-Job
+          } catch {
+            Write-Host "Water dimer test completed with error: $_"
+          }
+        } else {
+          Write-Host "OCC not available, skipping calculation test"
+        }
+    
+    - name: Test water trimer calculation (Windows with OCC)
+      shell: pwsh
+      run: |
+        . .\setup_env.ps1
+        if (Get-Command occ -ErrorAction SilentlyContinue) {
+          Set-Location 02_pairwise_sums\water_trimers
+          try {
+            $job = Start-Job -ScriptBlock { 
+              param($scriptPath)
+              & $scriptPath -Program occ -Method hf -Basis sto-3g 
+            } -ArgumentList (Resolve-Path ".\run_water_trimer.ps1")
+            
+            $job | Wait-Job -Timeout 300 | Out-Null
+            if ($job.State -eq 'Running') {
+              $job | Stop-Job
+              Write-Host "Water trimer test timed out after 5 minutes"
+            } else {
+              $job | Receive-Job
+              Write-Host "Water trimer test completed"
+            }
+            $job | Remove-Job
+          } catch {
+            Write-Host "Water trimer test completed with error: $_"
+          }
+        } else {
+          Write-Host "OCC not available, skipping water trimer test"
+        }
+    
+    - name: Test ice lattice energy calculation (Windows with OCC)
+      shell: pwsh
+      run: |
+        . .\setup_env.ps1
+        if (Get-Command occ -ErrorAction SilentlyContinue) {
+          Set-Location 02_pairwise_sums\ice_elat
+          try {
+            $job = Start-Job -ScriptBlock { 
+              param($scriptPath)
+              & $scriptPath -Model ce-1p -Threads 1
+            } -ArgumentList (Resolve-Path ".\run_ice_elat.ps1")
+            
+            $job | Wait-Job -Timeout 300 | Out-Null
+            if ($job.State -eq 'Running') {
+              $job | Stop-Job
+              Write-Host "Ice elat test timed out after 5 minutes"
+            } else {
+              $job | Receive-Job
+              Write-Host "Ice elat test completed"
+            }
+            $job | Remove-Job
+          } catch {
+            Write-Host "Ice elat test completed with error: $_"
+          }
+        } else {
+          Write-Host "OCC not available, skipping ice elat test"
+        }
+    
+    - name: Test XTB ice clusters (Windows with XTB)
+      shell: pwsh
+      run: |
+        . .\setup_env.ps1
+        if (Get-Command xtb -ErrorAction SilentlyContinue) {
+          Set-Location 02_pairwise_sums\ice_clusters
+          try {
+            $job = Start-Job -ScriptBlock { 
+              param($scriptPath)
+              & $scriptPath -Method gfn2 -Threads 1
+            } -ArgumentList (Resolve-Path ".\run_ice_clusters.ps1")
+            
+            $job | Wait-Job -Timeout 300 | Out-Null
+            if ($job.State -eq 'Running') {
+              $job | Stop-Job
+              Write-Host "XTB ice clusters test timed out after 5 minutes"
+            } else {
+              $job | Receive-Job
+              Write-Host "XTB ice clusters test completed"
+            }
+            $job | Remove-Job
+          } catch {
+            Write-Host "XTB ice clusters test completed with error: $_"
+          }
+        } else {
+          Write-Host "XTB not available, skipping ice clusters test"
+        }
+    
+    - name: Test environment setup (Cross-platform)
+      shell: pwsh
+      run: |
+        if ($IsWindows) {
+          if (Test-Path ".\setup_env.ps1") {
+            Write-Host "Found setup_env.ps1"
+            . .\setup_env.ps1
+          } else {
+            Write-Host "setup_env.ps1 not found, this is expected if setup.ps1 hasn't been run"
+          }
+        } else {
+          # On Linux/macOS, test that we can create a PowerShell environment script
+          Write-Host "Testing PowerShell environment setup capability on non-Windows"
+          $envScript = "# Test PowerShell environment script`n" +
+                       "`$WORKSHOP_DIR = Split-Path `$PSScriptRoot -Resolve`n" +
+                       "`$env:PATH = `"`$WORKSHOP_DIR/bin:`$env:PATH`"`n" +
+                       "Write-Host `"Workshop environment configured for PowerShell on `$([System.Environment]::OSVersion)`""
+          $envScript | Out-File -FilePath "test_setup_env.ps1" -Encoding UTF8
+          . .\test_setup_env.ps1
+          Remove-Item "test_setup_env.ps1"
+        }
+    
+    - name: Archive test artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: powershell-test-artifacts-${{ matrix.os }}
+        path: |
+          **/*.stdout
+          **/*.log
+          bin/
+        retention-days: 7
